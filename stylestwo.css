@@ -1,0 +1,145 @@
+header {
+  padding: 50px;
+  background-color: rgb(21, 104, 10);
+}
+body {background-color: rgb(140, 187, 126);}
+
+.containerforheader {
+    max-width: 1200px; /* Limits the header content width */
+    margin: 0 auto; /* Centers the header content */
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Centers items vertically */
+    font-size: 30px;
+  }
+
+  /* ===== Navigation Menu ===== */
+  .navigation {
+    display: flex; /* Horizontal alignment for nav items */
+    gap: 2rem; /* Adds spacing between links */
+    position: relative;
+    top: 7px;
+    padding-left: 200px;
+  }
+
+  .navigation a {
+    color: white; /* White text for nav links */
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s; /* Smooth hover transition */
+    text-align: center; /* Centers text */
+  }
+
+  .navigation a:hover {
+    background-color: #444; /* Darker background on hover */
+    border-radius: 4px; /* Rounds the corners slightly */
+  }
+
+  /* ===== Dropdown Menu ===== */
+  .dropdown {
+    position: relative; /* Ensures dropdown content is positioned relative to this element */
+  }
+
+  .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the parent */
+    top: 100%; /* Appears directly below the dropdown */
+    left: 0; /* Aligns to the left of the dropdown link */
+    background-color: #222; /* Dark background for the dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+    border-radius: 4px; /* Rounds the edges */
+    padding: 1rem; /* Adds padding inside the dropdown */
+    z-index: 1000; /* Ensures dropdown stays above other content */
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex; /* Makes the dropdown visible on hover */
+    flex-direction: column; /* Stacks the dropdown items vertically */
+  }
+
+  .dropdown-content a {
+    display: block; /* Ensures each link is its own block */
+    color: white; /* White text for dropdown links */
+    text-decoration: none; /* Removes underline */
+    padding: 0.5rem; /* Adds padding for a clickable area */
+    margin: 0.5rem 0; /* Adds spacing between dropdown links */
+    transition: background-color 0.3s; /* Smooth hover effect */
+  }
+
+  .dropdown-content a:hover {
+    background-color: #555; /* Darker background on hover */
+  }
+
+  /* ===== Submenu - Grid System ===== */
+  .submenu {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the dropdown section */
+    top: 0; /* Aligns with the parent */
+    left: 100%; /* Appears to the right of the parent */
+    background-color: #333; /* Dark background for submenu */
+    padding: 1rem; /* Adds padding inside submenu */
+    width: 300px; /* Sets width for submenu */
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 10px; /* Adds spacing between items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+  }
+
+  .dropdown-section:hover .submenu {
+    display: grid; /* Shows the submenu on hover */
+  }
+
+  .submenu-item {
+    text-align: center; /* Centers text and images inside each item */
+  }
+
+  .submenu-item img {
+    width: 100%; /* Ensures image fills the available width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 4px; /* Rounds the edges */
+  }
+
+  .submenu-item p {
+    margin-top: 0.5rem; /* Adds spacing above text */
+    font-size: 0.9rem; /* Slightly smaller font for captions */
+    color: #ccc; /* Light gray teaxt color */
+  }
+
+  /* Mobile Menu - Hidden by Default */
+    #mobile-menu {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #111;
+        padding: 1rem;
+        border-radius: 4px;
+        position: absolute;
+        top: 56px; /* Below the header */
+        right: 1rem; /* Aligns to the right */
+        z-index: 1000; /* Keeps it above other elements */
+    }
+    
+    /* Show Menu When Active */
+    #mobile-menu.active {
+        display: flex; /* Shows the menu when 'active' is added */
+    }
+  
+
+  #mobile-menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 1.5rem; /* Larger size for visibility */
+    color: white; /* White icon for contrast */
+    cursor: pointer; /* Indicates it's clickable */
+    background: none; /* Removes default button styling */
+    border: none; /* Removes borders */
+    font-size: 50px;
+    right: 2rem; /* Aligns to the right */
+  }
+
+  /* ===== Responsive Design (for Mobile) ===== */
+  @media (max-width: 1002px) {
+    .navigation {
+      display: none; /* Hides desktop menu on small screens */
+    }
+
+    #mobile-menu-toggle {
+      display: block; /* Shows the mobile menu toggle button */
+    }
+  }
