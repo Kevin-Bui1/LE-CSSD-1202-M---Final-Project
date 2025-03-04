@@ -1,3 +1,16 @@
+* {
+ padding: 0;
+ margin: 0;
+ text-align: center;
+}
+
+#logoimg{
+    display: block;
+    margin: auto;
+    width:200px;
+    height:100px;
+}
+
 header{
     
     align-items: center;
@@ -7,10 +20,6 @@ header{
 nav{
     background-color: grey;}
 
-img {
-    display: block;
-     margin: auto;
-}
 
 nav ul {
     list-style: none;
