@@ -1,55 +1,109 @@
-* {
- padding: 0;
- margin: 0;
- text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  background: url('laptop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#logoimg{
-    display: block;
-    margin: auto;
-    width:200px;
-    height:100px;
-}
-
-header{
-    
-    align-items: center;
-    background-color: #e8efea;
-}
 
 nav{
-    background-color: grey;}
-
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  margin:auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: darkgoldenrod;
+  background-color: rgb(5, 34, 7);
 }
 
-nav ul li {
-    position: relative;
-    margin: 0 20px;
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
-    transition: background-color 0.3s;
+nav a:hover{
+  background-color: #f0f0f0;
 }
 
-nav ul li a:hover {
-    background-color: #444;
-    border-radius: 4px;
+.hamburger {
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-main{display: block;
-    margin: auto;}
+.hamburger span {
+  
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: pink;
+}
 
-footer{
-    align-items: center;
+
+#X{color: pink;}
+
+.sidebar{
+  color: green;
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+
+
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
 }
