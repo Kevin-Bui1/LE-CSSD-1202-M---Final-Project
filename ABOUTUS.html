@@ -8,23 +8,34 @@
   </head>
   <body>
     <center>
-    <header>
-        
-          <div class="containerforheader">
+    <header> 
+          <div class="off-screen-menu">
             <img src="leaf.png" alt="leafs" id="logoimg">
-            <nav class="navigation" id="desktop-menu">
-              <ul>
-                
+            <nav>
+              <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><p id="X">X</p></a></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pagesection1.html">page1</a></li>
-                <li><a href="pagesection2.html">page2</a></li>
-                <li><a href="pagesection3.html">page3</a></li>
-                <li><a href="pagesection4.html">page4</a></li>
-                <li><a href="ABOUTUS.html">about us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul></nav>
+                <li><a href="pagesection1.html">Page1</a></li>
+                <li><a href="pagesection2.html">Page2</a></li>
+                <li><a href="pagesection3.html">Page3</a></li>
+                <li><a href="pagesection4.html">Page4</a></li>
+                <li><a href="ABOUTUS.html">About us</a></li>
+                <li><a href="CONATCT.html">Contact</a></li>
+              </ul>
+              <ul>
+                <li class="hideOnMobile"><a href="index.html" class="align">Home</a></li>
+                <li class="hideOnMobile"><a href="pagesection1.html" class="align">Page1</a></li>
+                <li class="hideOnMobile"><a href="pagesection2.html" class="align">Page2</a></li>
+                <li class="hideOnMobile"><a href="pagesection3.html" class="align">Page3</a></li>
+                <li class="hideOnMobile"><a href="pagesection4.html" class="align">Page4</a></li>
+                <li class="hideOnMobile"><a href="ABOUTUS.html" class="align">About us</a></li>
+                <li class="hideOnMobile"><a href="CONTACT.html" class="align">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar() ><a href="#" class="toggle"><div class="hamburger"><span></span><span></span><span></span></div></a></li>
+              </ul>
+            </nav>
           </div>
-        </header>
+      </header> 
+   <script src="hamburg.js"></script>
 
     <main> 
     <section>
