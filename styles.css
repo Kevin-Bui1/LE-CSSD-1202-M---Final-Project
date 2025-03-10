@@ -107,3 +107,16 @@ nav a:hover{
     width: 100%;
   }
 }
+
+ol li {
+  margin-bottom: 15px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+
+.centered-text {
+  width: 60%; 
+  margin: 0 auto; 
+  text-align: justify; 
+}
