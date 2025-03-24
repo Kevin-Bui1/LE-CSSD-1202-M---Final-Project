@@ -82,6 +82,57 @@
 
       <h2>Set Personalized Goals - coming soon…</h2><br><br>
       <h2>Calculate Your Impact - coming soon…<br><br><br><br></h2>
+
+    <!--the calculate your impact part-->
+      <div class="container" >
+        <h2>Calculate Your Impact - Carbon Footprint Calculator</h2>
+        <label for="transport">Daily Transportation (Km): </label>
+        <input type="number" id="transport" min="0" value="0"><br><br>
+        
+        <label for="diet">Diet Type: </label>
+        <select id="diet">
+            <option value="high">Meat-heavy</option>
+            <option value="medium">Balanced</option>
+            <option value="low">Vegetarian/Vegan</option>
+        </select><br><br>
+        
+        <label for="energy">Monthly Energy Consumption (kWh): </label>
+        <input type="number" id="energy" min="0" value="0"><br><br>
+        
+        <button onclick="calculateFootprint()">Calculate</button>
+        
+        <div class="result" id="result"></div>
+        <div id="tips"></div>
+    </div>
+
+    <script>
+        function calculateFootprint() {
+            let transport = parseInt(document.querySelector('#transport').value) || 0;
+            let diet = document.querySelector('#diet').value;
+            let energy = parseInt(document.querySelector('#energy').value) || 0;
+            
+            let footprint = (transport * 0.4) + (energy * 0.2); // Basic carbon calculation
+            if (diet === "high") footprint += 5;
+            if (diet === "medium") footprint += 3;
+            if (diet === "low") footprint += 1;
+            
+            document.getElementById("result").textContent = `Your estimated carbon footprint is ${footprint.toFixed(2)} kg CO₂ per day.`;
+            
+            let tipsDiv = document.getElementById("tips");
+            tipsDiv.innerHTML = "";
+            
+            let tipList = document.createElement("ul");
+            
+            if (transport > 20) tipList.innerHTML += "<li>Consider using public transport or carpooling.</li>";
+            if (diet === "high") tipList.innerHTML += "<li>Try reducing meat consumption to lower your footprint.</li>";
+            if (energy > 500) tipList.innerHTML += "<li>Switching to energy-efficient appliances can reduce consumption.</li>";
+            
+            if (tipList.innerHTML === "") tipList.innerHTML = "<li>Great job! Your footprint is already low.</li>";
+            
+            tipsDiv.appendChild(tipList);
+        }
+    </script>
+    <!--end of calculate your impact-->
       
       <div class="motivation-section">
       <h2>Have Your Daily Dose of Motivation to stay Sustainable</h2><br>
