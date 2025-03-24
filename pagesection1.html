@@ -58,7 +58,28 @@
       <p>
         On this page you can track YOUR progress in your SUSTAINABLE journey. Here you can document, find daily tips, set personalized goals, and calculate your impact.<br><br>
       </p>
-      <h2>Tracker - coming soon…<br><br></h2>
+
+      <h2>🌿 Eco Tracker</h2>
+      <p style="text-align: center;">Log your daily eco-friendly actions and see your progress!</p>
+
+      <form id="ecoTrackerForm">
+      <label for="ecoAction">Enter your eco-friendly action:</label>
+      <input type="text" id="ecoAction" required>
+      <button type="submit">Add Action</button>
+      </form>
+
+      <h3>Your Logged Actions:</h3>
+      <ul id="ecoActionList"></ul>
+
+      <p style="text-align: center;"><strong>Total Actions Logged:</strong> <span id="actionCount">0</span></p>
+
+      <div class="progress-container">
+        <div id="progressBar"></div>
+      </div>
+  
+      
+      <div id="successMessage" style="display: none;">Success! Action logged.</div>
+
       <h2>Set Personalized Goals - coming soon…</h2><br><br>
       <h2>Calculate Your Impact - coming soon…<br><br><br><br></h2>
       
@@ -83,6 +104,8 @@
     <footer>
     <a href="ABOUTUS.html">Want to learn more about us? click here</a>
   </footer>
+
+  <script src="ecoTracker.js"></script>
     
   </body>
 </html>
