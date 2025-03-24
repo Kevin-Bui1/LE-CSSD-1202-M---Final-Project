@@ -68,6 +68,35 @@
             positive impact together! 
           </p></div>
         </section>
+
+     <!--the interactive sustainability tip-->
+        <centre>        
+        <section style="text-align: center;">
+
+          <h2>Hover over the icon to see an eco-friendly tip!</h2><br><br>
+    
+          <div class="tip-container" id="tipIcon">
+              🌱
+              <div class="tip-box" id="tipBox">Save energy by turning off lights when not needed!</div>
+          </div>
+      
+          <script>
+              const tipIcon = document.getElementById("tipIcon");
+              const tipBox = document.getElementById("tipBox");
+      
+              tipIcon.addEventListener("mouseover", function () {
+                  tipBox.style.display = "block";
+              });
+      
+              tipIcon.addEventListener("mouseout", function () {
+                  tipBox.style.display = "none";
+              });
+          </script>
+
+        </section>
+      </centre>
+      <!--end of interactive sustainbility tip-->
+            
   </main>
    <footer>
     <a href="ABOUTUS.html">Want to learn more about us? click here</a>
